@@ -17,9 +17,7 @@ This repository includes a Docker Compose setup for quickly launching a WordPres
 Key features:
 
 - **Containerized Deployment**: Run WordPress and MariaDB reliably using Docker.
-
 - **Environment Variable Configuration**: Easily customize credentials and database details via a `.env` file.
-
 - **Scalable & Portable**: Run locally or deploy on a remote server/VM.
 
 ## Quickstart
@@ -41,7 +39,7 @@ Ensure you have the following tools installed:
 2. Create a `.env` file from the example configuration:
 
    ```bash
-   cp example_env .env
+   cp example.env .env
    ```
 
 3. Edit the `.env` file to set your desired configuration (see [Configuration](#configuration)).
@@ -69,12 +67,12 @@ Ensure you have the following tools installed:
 
 The [example.env](./example.env) file allows you to customize the WordPress and MariaDB setup. Below is a list of the environment variables and their functions:
 
-| Option               | Description                                        | Default value | Required |
-| -------------------- | -------------------------------------------------- | ------------- | -------- |
-| `WORDPRESS_USER`     | Username for the WordPress admin account.          | user          | Yes      |
-| `WORDPRESS_PASSWORD` | Password for the WordPress admin account.          | password      | Yes      |
-| `DATABASE_NAME`      | Name of the MariaDB database used by WordPress.    | wordpress     | Yes      |
-| `DATABASE_HOST`      | Hostname of the database (matches the db service). | db            | Yes      |
+| Variable             | Description                                        | Possible Values | Required |
+| -------------------- | -------------------------------------------------- | --------------- | -------- |
+| `WORDPRESS_USER`     | Username for the WordPress admin account.          | user            | Yes      |
+| `WORDPRESS_PASSWORD` | Password for the WordPress admin account.          | password        | Yes      |
+| `DATABASE_NAME`      | Name of the MariaDB database used by WordPress.    | wordpress       | Yes      |
+| `DATABASE_HOST`      | Hostname of the database (matches the db service). | db              | Yes      |
 
 ### Updating the Setup
 
