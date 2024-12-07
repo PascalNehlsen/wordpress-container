@@ -67,12 +67,12 @@ Ensure you have the following tools installed:
 
 The [example.env](./example.env) file allows you to customize the WordPress and MariaDB setup. Below is a list of the environment variables and their functions:
 
-| Variable             | Description                                        | Possible Values | Required |
-| -------------------- | -------------------------------------------------- | --------------- | -------- |
-| `WORDPRESS_USER`     | Username for the WordPress admin account.          | user            | Yes      |
-| `WORDPRESS_PASSWORD` | Password for the WordPress admin account.          | password        | Yes      |
-| `DATABASE_NAME`      | Name of the MariaDB database used by WordPress.    | wordpress       | Yes      |
-| `DATABASE_HOST`      | Hostname of the database (matches the db service). | db              | Yes      |
+| Variable             | Description                                                            | Possible Values | Required |
+| -------------------- | ---------------------------------------------------------------------- | --------------- | -------- |
+| `WORDPRESS_USER`     | Username for the WordPress admin account.                              | user            | Yes      |
+| `WORDPRESS_PASSWORD` | Password for the WordPress admin account.                              | password        | Yes      |
+| `DATABASE_NAME`      | Name of the MariaDB database used by WordPress.                        | wordpress       | Yes      |
+| `DATABASE_HOST`      | Hostname of the database (matches the db service) and db exposed Port. | db:3306         | Yes      |
 
 ### Updating the Setup
 
