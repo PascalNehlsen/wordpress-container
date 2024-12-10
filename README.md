@@ -27,13 +27,13 @@ Key features:
 Ensure you have the following tools installed:
 
 - [Docker](https://www.docker.com/products/docker-desktop)
-  - Docker Compose is included with Docker 20.10 and later. If you have an older version, follow the [official instructions](https://docs.docker.com/compose/install/) to install Docker Compose as a plugin.
+  - Docker Compose was included with Docker versions 20.10 and later, but recently it is no longer included by default. For the latest Docker versions, you will need to install Docker Compose manually as a plugin. Follow the official instructions for detailed steps.
 
 1. Clone this repository:
 
    ```bash
    git clone https://github.com/PascalNehlsen/wordpress-container
-   cd minecraft-server
+   cd wordpress-container
    ```
 
 2. Create a `.env` file from the example configuration:
