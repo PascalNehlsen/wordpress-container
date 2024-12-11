@@ -1,0 +1,27 @@
+services:
+  db:
+    image: mariadb:11.0
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-rootpassword}
+      MYSQL_DATABASE: ${DATABASE_NAME:-wordpress_db}
+      MYSQL_USER: ${WORDPRESS_USER:-wordpress}
+      MYSQL_PASSWORD: ${WORDPRESS_PASSWORD:-password}
+    expose:
+      - 3306
+
+  wordpress:
+    image: wordpress:6.3
+    ports:
+      - 8080:80
+    restart: unless-stopped
+    environment:
+      WORDPRESS_DB_HOST: ${DATABASE_HOST:-db:3306}
+      WORDPRESS_DB_USER: ${WORDPRESS_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_PASSWORD:-password}
+      WORDPRESS_DB_NAME: ${DATABASE_NAME:-wordpress_db}
+
+volumes:
+  db_data:
