@@ -78,10 +78,10 @@ The [example.env](./example.env) file allows you to customize the WordPress and 
 
 To modify the configuration, edit the `.env` file and restart the containers:
 
-    ```bash
+   ```bash
     docker compose down
     docker compose up -d
-    ```
+   ```
 
 ## Contact
 
